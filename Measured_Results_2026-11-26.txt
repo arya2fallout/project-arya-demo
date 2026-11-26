@@ -1,0 +1,122 @@
+PAGE 1
+PROJECT ARYA  |  PUBLIC RESEARCH SNAPSHOT - 26 NOVEMBER 2026
+1
+Measured results
+PA-SUM-004 v1.1 | Sanitized technical summary | 26 November 2026
+1. Environment and test design
+Windows 10 Pro build 19045; Intel i7-4960X (6 cores / 12 threads); approximately 32 GB RAM. Installed GPUs: RTX
+3060 Ti 8 GB and RTX 4060 Ti 16 GB. Driver 621.14; Ollama 0.40.18; OpenCode 1.19.5. Gaming routing and the
+Balanced power plan were retained. Inference used the RTX 3060 Ti; background services remained active.
+Ten fixed neutral prompts, five repetitions per model. Temperature 0, seed 42, context 2048, output cap 128 tokens,
+thinking disabled. Both configurations were Q4_K_M. Other model-specific defaults were recorded and not
+equalized. One priming call per model was excluded from the 50 measured calls; cold-start status was not
+established. Bridge polling overlapped inference.
+Metric
+Qwen 3.5 4B
+Qwen 2.5 Coder 7B
+Measured calls / request errors
+50 / 0
+50 / 0
+Wall latency median / p95
+1.601 / 1.714 s
+1.432 / 1.730 s
+Wall latency maximum
+54.486 s
+1.739 s
+TTFT median / p95
+0.115 / 0.136 s
+0.055 / 0.071 s
+Median decode rate
+81.750 tokens/s
+77.284 tokens/s
+Output-cap hits
+25 / 50
+20 / 50
+Excluded priming call
+83.429 s
+60.525 s
+Interpretation
+Decode rate uses the runtime token count and evaluation duration. TTFT measures receipt of the first nonempty
+streamed chunk, including loading and prompt processing. p95 is nearest rank. Different response lengths and model
+defaults prevent a simple causal speed ranking. A successful API call does not establish a complete or correct
+answer.
+
+
+PAGE 2
+PROJECT ARYA  |  PUBLIC RESEARCH SNAPSHOT - 26 NOVEMBER 2026
+2
+Reliability and repair evidence
+PA-SUM-004 | Page 2: bridge and resource observations
+2. Bridge results
+The initial benchmark returned 30/30 successful matched status results: median 22.75 seconds, p95 23.05 seconds.
+The live safety phase found expiration and filename-replay enforcement missing. Only newly created dummy files
+were used.
+The repair added durable claims before dispatch, deadline checks and replay protection across worker restarts. Its
+first regression batch returned 30/30 transport matches but 0/30 healthy OpenCode checks because an inherited
+PowerShell module path broke credential-helper command discovery. That failure was retained, diagnosed and
+corrected without changing the stored credential.
+Final verification
+Observed result
+Automated tests
+15 / 15 passed
+Original live safety scenarios
+13 / 13 passed
+Follow-up launch / safety checks
+4 / 4 passed
+Final status requests
+30 / 30 matched; all service-health checks true
+Final round-trip median / p95
+23.058 / 24.653 seconds
+Scope of the safeguards
+Identity checks cover command filenames and optional request IDs at the Drive-worker boundary. Expiry is enforced
+when supplied; legacy requests without it remain compatible. A crash can leave an uncertain claimed operation
+blocked for manual inspection. The ledger must be retained. These tests do not certify every direct tool, all crash
+modes or whole-machine security.
+3. Resource sampling
+297 samples were collected at a one-second target interval plus sampling overhead. RTX 3060 Ti observed maxima:
+4,570 MiB used VRAM, 66.56 C and 199.93 W reported board power. Whole-system used RAM peaked at 12.02 GB
+(decimal). GPU memory includes other clients; sampled peaks can miss brief spikes. Board power is not wall energy.
+No electricity-cost or savings claim is made.
+
+
+PAGE 3
+PROJECT ARYA  |  PUBLIC RESEARCH SNAPSHOT - 26 NOVEMBER 2026
+3
+Grounding and next experiments
+PA-SUM-004 | Page 3: screening results and evidence boundaries
+4. Paired synthetic retrieval
+The original corpus contains ten fictional records, 30 answerable questions and five absent-information questions.
+Qwen 2.5 Coder 7B ran each question with and without retrieved context, alternating condition order: 70 calls, no
+request errors. These questions were written to match the corpus, not independently held out.
+Screening metric
+No context
+Retrieved context
+Expected fact phrase
+0 / 30
+27 / 30
+Expected source ID
+0 / 30
+30 / 30
+Exact abstention on absent information
+4 / 5
+5 / 5
+Latency median / p95
+0.067 / 0.093 s
+0.276 / 0.357 s
+Response review
+Three context-on answers correctly identified port 8080 but failed the contiguous phrase matcher. Assistant review
+therefore found the core facts semantically correct in all 30 answerable responses, while also flagging one added
+creation-time assumption not explicit in the evidence. Without context, one response invented a source ID.
+Independent human adjudication remains outstanding. The deterministic keyword baseline passed 35/35; it is not a
+language model.
+Proposed next work
+Freeze an independently authored held-out set before tuning. Investigate the long prompt-processing outlier with
+repeat runs and controlled cache conditions. Benchmark the existing 16 GB GPU under matched settings before
+requesting higher-memory hardware. Add mobile measurements only after recording an actual device, application
+version, model and controls.
+Evidence and disclosure
+Full raw records, prompt set, model digests, settings, hashes, failed outcomes and repair tests are retained privately
+under PA-LIVE-20261126 and PA-REPAIR-20261126. This summary removes personal filesystem paths, process
+IDs, private account identifiers, credentials and raw operational logs. No model weights or private conversations are
+distributed. AI assistance was used in code and report preparation. No independent peer review, production
+certification, sustained stability claim, cross-device speedup or sponsor award is asserted.

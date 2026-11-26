@@ -1,0 +1,278 @@
+{
+  "version": "1.0",
+  "description": "Entirely fictional smoke-test dataset. Not independent held-out evaluation.",
+  "documents": [
+    {
+      "id": "LAB-01",
+      "title": "Cooling protocol",
+      "answer": "22 degrees Celsius",
+      "text": "The fictional cooling trial uses a target ambient temperature of 22 degrees Celsius."
+    },
+    {
+      "id": "LAB-02",
+      "title": "Storage validation",
+      "answer": "8 gigabytes",
+      "text": "The fictional storage validation reserves 8 gigabytes of temporary disk space."
+    },
+    {
+      "id": "LAB-03",
+      "title": "Optical sensor",
+      "answer": "450 nanometers",
+      "text": "The fictional optical sensor uses a calibration wavelength of 450 nanometers."
+    },
+    {
+      "id": "LAB-04",
+      "title": "Sample transport",
+      "answer": "Tuesday",
+      "text": "The fictional sample transport pickup is scheduled for Tuesday."
+    },
+    {
+      "id": "LAB-05",
+      "title": "Archive retention",
+      "answer": "90 days",
+      "text": "The fictional archive retention period is 90 days before routine review."
+    },
+    {
+      "id": "LAB-06",
+      "title": "Pressure chamber",
+      "answer": "120 kilopascals",
+      "text": "The fictional pressure chamber operating target is 120 kilopascals."
+    },
+    {
+      "id": "LAB-07",
+      "title": "Training cohort",
+      "answer": "12 participants",
+      "text": "The fictional training cohort contains 12 participants."
+    },
+    {
+      "id": "LAB-08",
+      "title": "Instrument maintenance",
+      "answer": "Friday",
+      "text": "The fictional instrument maintenance inspection is scheduled for Friday."
+    },
+    {
+      "id": "LAB-09",
+      "title": "Backup verification",
+      "answer": "SHA-256",
+      "text": "The fictional backup verification uses the SHA-256 digest algorithm."
+    },
+    {
+      "id": "LAB-10",
+      "title": "Network exercise",
+      "answer": "port 8080",
+      "text": "The fictional isolated network exercise labels its example service port 8080; it does not connect to any real system."
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q01-1",
+      "question": "What is the cooling trial target ambient temperature?",
+      "expected_id": "LAB-01",
+      "expected_answer": "22 degrees Celsius"
+    },
+    {
+      "id": "Q01-2",
+      "question": "Which temperature is specified in the cooling protocol?",
+      "expected_id": "LAB-01",
+      "expected_answer": "22 degrees Celsius"
+    },
+    {
+      "id": "Q01-3",
+      "question": "Tell me the ambient temperature for the cooling trial.",
+      "expected_id": "LAB-01",
+      "expected_answer": "22 degrees Celsius"
+    },
+    {
+      "id": "Q02-1",
+      "question": "How much temporary disk space does storage validation reserve?",
+      "expected_id": "LAB-02",
+      "expected_answer": "8 gigabytes"
+    },
+    {
+      "id": "Q02-2",
+      "question": "What is the storage validation capacity reservation?",
+      "expected_id": "LAB-02",
+      "expected_answer": "8 gigabytes"
+    },
+    {
+      "id": "Q02-3",
+      "question": "What disk space is reserved for the storage validation?",
+      "expected_id": "LAB-02",
+      "expected_answer": "8 gigabytes"
+    },
+    {
+      "id": "Q03-1",
+      "question": "What is the optical sensor calibration wavelength?",
+      "expected_id": "LAB-03",
+      "expected_answer": "450 nanometers"
+    },
+    {
+      "id": "Q03-2",
+      "question": "Which wavelength is used by the optical sensor?",
+      "expected_id": "LAB-03",
+      "expected_answer": "450 nanometers"
+    },
+    {
+      "id": "Q03-3",
+      "question": "Give the optical sensor wavelength.",
+      "expected_id": "LAB-03",
+      "expected_answer": "450 nanometers"
+    },
+    {
+      "id": "Q04-1",
+      "question": "When is the sample transport pickup?",
+      "expected_id": "LAB-04",
+      "expected_answer": "Tuesday"
+    },
+    {
+      "id": "Q04-2",
+      "question": "What day is sample transport scheduled?",
+      "expected_id": "LAB-04",
+      "expected_answer": "Tuesday"
+    },
+    {
+      "id": "Q04-3",
+      "question": "Which day does the transport pickup occur?",
+      "expected_id": "LAB-04",
+      "expected_answer": "Tuesday"
+    },
+    {
+      "id": "Q05-1",
+      "question": "How long is the archive retention period?",
+      "expected_id": "LAB-05",
+      "expected_answer": "90 days"
+    },
+    {
+      "id": "Q05-2",
+      "question": "What duration is specified for archive retention?",
+      "expected_id": "LAB-05",
+      "expected_answer": "90 days"
+    },
+    {
+      "id": "Q05-3",
+      "question": "When is routine archive review due under the retention policy?",
+      "expected_id": "LAB-05",
+      "expected_answer": "90 days"
+    },
+    {
+      "id": "Q06-1",
+      "question": "What is the pressure chamber operating target?",
+      "expected_id": "LAB-06",
+      "expected_answer": "120 kilopascals"
+    },
+    {
+      "id": "Q06-2",
+      "question": "Which pressure is specified for the chamber?",
+      "expected_id": "LAB-06",
+      "expected_answer": "120 kilopascals"
+    },
+    {
+      "id": "Q06-3",
+      "question": "Give the chamber pressure target.",
+      "expected_id": "LAB-06",
+      "expected_answer": "120 kilopascals"
+    },
+    {
+      "id": "Q07-1",
+      "question": "How many participants are in the training cohort?",
+      "expected_id": "LAB-07",
+      "expected_answer": "12 participants"
+    },
+    {
+      "id": "Q07-2",
+      "question": "What is the training cohort size?",
+      "expected_id": "LAB-07",
+      "expected_answer": "12 participants"
+    },
+    {
+      "id": "Q07-3",
+      "question": "Give the number of training participants.",
+      "expected_id": "LAB-07",
+      "expected_answer": "12 participants"
+    },
+    {
+      "id": "Q08-1",
+      "question": "When is instrument maintenance inspection scheduled?",
+      "expected_id": "LAB-08",
+      "expected_answer": "Friday"
+    },
+    {
+      "id": "Q08-2",
+      "question": "Which day is the instrument maintenance inspection?",
+      "expected_id": "LAB-08",
+      "expected_answer": "Friday"
+    },
+    {
+      "id": "Q08-3",
+      "question": "What day is maintenance scheduled for the instrument?",
+      "expected_id": "LAB-08",
+      "expected_answer": "Friday"
+    },
+    {
+      "id": "Q09-1",
+      "question": "Which digest algorithm is used for backup verification?",
+      "expected_id": "LAB-09",
+      "expected_answer": "SHA-256"
+    },
+    {
+      "id": "Q09-2",
+      "question": "What algorithm verifies the backup?",
+      "expected_id": "LAB-09",
+      "expected_answer": "SHA-256"
+    },
+    {
+      "id": "Q09-3",
+      "question": "What is the backup verification hash method?",
+      "expected_id": "LAB-09",
+      "expected_answer": "SHA-256"
+    },
+    {
+      "id": "Q10-1",
+      "question": "Which service port is labeled in the network exercise?",
+      "expected_id": "LAB-10",
+      "expected_answer": "port 8080"
+    },
+    {
+      "id": "Q10-2",
+      "question": "What is the network exercise example port?",
+      "expected_id": "LAB-10",
+      "expected_answer": "port 8080"
+    },
+    {
+      "id": "Q10-3",
+      "question": "Give the port for the isolated network exercise.",
+      "expected_id": "LAB-10",
+      "expected_answer": "port 8080"
+    },
+    {
+      "id": "U01",
+      "question": "Who invented the telescope?",
+      "expected_id": null,
+      "expected_answer": null
+    },
+    {
+      "id": "U02",
+      "question": "What is the capital of Iceland?",
+      "expected_id": null,
+      "expected_answer": null
+    },
+    {
+      "id": "U03",
+      "question": "What is the price of a bicycle?",
+      "expected_id": null,
+      "expected_answer": null
+    },
+    {
+      "id": "U04",
+      "question": "Who painted the Mona Lisa?",
+      "expected_id": null,
+      "expected_answer": null
+    },
+    {
+      "id": "U05",
+      "question": "What is the population of Mars?",
+      "expected_id": null,
+      "expected_answer": null
+    }
+  ]
+}
