@@ -45,6 +45,14 @@ No mobile benchmark, matched comparison with the installed RTX 4060 Ti, independ
 
 Useful next work includes an independently authored held-out dataset, repeatability and stall diagnosis, and fair comparisons of existing hardware. Please use fictional examples in issues; never post credentials, private conversations or operational logs. No sponsor award, affiliation, institutional eligibility, service level or delivery schedule is claimed.
 
+### Community and maintenance
+
+- [Development roadmap](ROADMAP.md)
+- [Security policy and reporting](SECURITY.md)
+- [Contribution guidelines](CONTRIBUTING.md)
+- [Benchmark methodology](BENCHMARKS.md)
+- [Independent testing invitation (issue #1)](https://github.com/arya2fallout/project-arya-demo/issues/1)
+
 ## License and disclosure
 
 The demo source, fixture data, tests and associated usage documentation are released under the [MIT License](LICENSE), as approved by the owner. The separately authored measured-results PDF and text are public for reading; their inclusion does not grant a separate reuse license for those reports. No third-party model weights, game assets or private project code are distributed.
