@@ -39,7 +39,15 @@ Read [the public results PDF](Measured_Results_2026-11-26.pdf) or its [text vers
 
 One inference call took 54.49 seconds. Many answers reached the 128-token cap. Synthetic retrieval exposed an unsupported addition, an invented source without context, and phrase-scoring limitations. The first repair regression had an OpenCode-health failure that was corrected before the final 30/30 healthy run. Negative outcomes remain part of the record.
 
-No mobile benchmark, matched comparison with the installed RTX 4060 Ti, independent human adjudication, long-duration stability test or energy-cost result is claimed. Full private operational logs are not included. The summary alone does not independently reproduce every desktop measurement.
+That historical snapshot did not include a matched comparison with the installed RTX 4060 Ti. A subsequent matched study is linked below. No mobile benchmark, independent human adjudication, long-duration stability test or energy-cost result is claimed. Full private operational logs are not included. The summary alone does not independently reproduce every desktop measurement.
+
+## Subsequent experimental research — November 26, 2026
+
+- [Matched consumer GPU inference and context testing](research/2026-11-26-matched-gpu.md): 200 measured calls, retained outliers and targeted CUDA profiling.
+- [Persistent knowledge and cross-session retrieval](research/2026-11-26-knowledge.md): 60 paired model trials, semantic adjudication and unsuccessful cross-session retrieval.
+- [Execution reliability, authorization and completion verification](research/2026-11-26-execution.md): 24 sandbox trials, observed failures, blocked operations and proposed controls.
+
+These are sanitized research baselines, not features of the browser demo or independently replicated results. Corrective engineering remains separate. The reports are publicly readable under the same disclosure boundaries as the historical report; no additional reuse license is granted for them.
 
 ## Scope and contributions
 
